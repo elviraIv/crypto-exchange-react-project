@@ -7,6 +7,7 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Account from "./pages/Account";
 import axios from "axios";
+import CoinPage from "./pages/CoinPage";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -17,7 +18,7 @@ function App() {
   useEffect(() => {
     axios.get(url).then((response) => {
       setCoins(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     });
   }, [url]);
 
@@ -25,10 +26,14 @@ function App() {
     <ThemeProvider>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home coins = {coins} />} />
+        <Route path="/" element={<Home coins={coins} />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/acount " element={<Account />} />
+        <Route path="/coin/:coinId" element={<CoinPage />}>
+          <Route path=":coinId" />
+          <Route />
+        </Route>
       </Routes>
     </ThemeProvider>
   );
