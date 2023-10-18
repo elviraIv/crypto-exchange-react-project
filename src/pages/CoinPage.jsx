@@ -53,7 +53,7 @@ const CoinPage = () => {
             <div>
               <p className="text-gray-500 text-sm">Volume (24h)</p>
               {coin.market_data?.market_cap ? (
-                <p>€{coin.market_data.total_volume.eur.toLocaleString()}</p>
+                <p>€{coin.market_data?.total_volume.eur.toLocaleString()}</p>
               ) : null}
             </div>
           </div>
@@ -68,7 +68,7 @@ const CoinPage = () => {
             <div>
               <p className="text-gray-500 text-sm">24h Low</p>
               {coin.market_data?.low_24h ? (
-                <p>€{coin.market_data.low_24h.eur.toLocaleString()}</p>
+                <p>€{coin.market_data?.low_24h.eur.toLocaleString()}</p>
               ) : null}
             </div>
           </div>
@@ -96,21 +96,21 @@ const CoinPage = () => {
               <p className="text-gray-500 text-sm">Price Change (24h)</p>
               {coin.market_data ? (
                 <p>
-                  {coin.market_data.price_change_percentage_24h.toFixed(2)}%
+                  {coin.market_data?.price_change_percentage_24h.toFixed(2)}%
                 </p>
               ) : null}
             </div>
             <div>
               <p className="text-gray-500 text-sm">Price Change (7d)</p>
               {coin.market_data ? (
-                <p>{coin.market_data.price_change_percentage_7d.toFixed(2)}%</p>
+                <p>{coin.market_data?.price_change_percentage_7d.toFixed(2)}%</p>
               ) : null}
             </div>
             <div>
               <p className="text-gray-500 text-sm">Price Change (14d)</p>
               {coin.market_data ? (
                 <p>
-                  {coin.market_data.price_change_percentage_14d.toFixed(2)}%
+                  {coin.market_data?.price_change_percentage_14d.toFixed(2)}%
                 </p>
               ) : null}
             </div>
@@ -120,7 +120,7 @@ const CoinPage = () => {
               <p className="text-gray-500 text-sm">Price Change (30d)</p>
               {coin.market_data ? (
                 <p>
-                  {coin.market_data.price_change_percentage_30d.toFixed(2)}%
+                  {coin.market_data?.price_change_percentage_30d.toFixed(2)}%
                 </p>
               ) : null}
             </div>
@@ -128,14 +128,14 @@ const CoinPage = () => {
               <p className="text-gray-500 text-sm">Price Change (60d)</p>
               {coin.market_data ? (
                 <p>
-                  {coin.market_data.price_change_percentage_60d.toFixed(2)}%
+                  {coin.market_data?.price_change_percentage_60d.toFixed(2)}%
                 </p>
               ) : null}
             </div>
             <div>
               <p className="text-gray-500 text-sm">Price Change (1y)</p>
               {coin.market_data ? (
-                <p>{coin.market_data.price_change_percentage_1y.toFixed(2)}%</p>
+                <p>{coin.market_data?.price_change_percentage_1y.toFixed(2)}%</p>
               ) : null}
             </div>
           </div>
